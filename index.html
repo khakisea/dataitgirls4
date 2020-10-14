@@ -6,10 +6,29 @@
         </script>
     </head>
     <body>
+        <input type="button" id="screenModeBtn" value="night" onclick="
+            var mode = document.querySelector('#screenModeBtn').value;
+            if(mode === 'night'){
+                document.querySelector('#screenModeBtn').value = 'day';
+                var bodyTag = document.querySelector('h1');
+                bodyTag.style.backgroundColor='lavender';
+                bodyTag.style.color='darkcyan';
+                document.querySelector('#a1').style.color='darkcyan';
+                document.querySelector('#a2').style.color='darkcyan';
+                document.querySelector('#a3').style.color='darkcyan';
+            } else {
+                document.querySelector('#screenModeBtn').value = 'night';
+                var bodyTag = document.querySelector('h1');
+                bodyTag.style.backgroundColor='bisque';
+                bodyTag.style.color='brown';
+                document.querySelector('#a1').style.color='brown';
+                document.querySelector('#a2').style.color='brown';
+                document.querySelector('#a3').style.color='brown';
+            }
+        ">    
         <h1>WEB</h1>
         <!-- <h1 style="border:5px solid blue;background-color:green;">WEB</h1> -->
         <input type="button" value="day" onclick="
-            debugger;
             var bodyTag = document.querySelector('h1');
             bodyTag.style.backgroundColor='lavender';
             bodyTag.style.color='darkcyan';
